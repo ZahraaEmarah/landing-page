@@ -38,8 +38,8 @@ function SelectNavLink(li) {
 }
 
 function UnSelectNavLink(li) {
-    li.classList.add("menu__link")
     li.classList.remove("menu__link__selected");
+    li.classList.add("menu__link")
 }
 
 
