@@ -52,8 +52,8 @@ function UnSelectNavLink(li) {
 function navBuilder() {
     const nav = document.getElementById('navbar__list');
 
-    for (var i = 0; i < all_sections.length; i++) {
-        var li = NewNavList(i);
+    for (let i = 0; i < all_sections.length; i++) {
+        let li = NewNavList(i);
         if (i == 0) {
             SelectNavLink(li);
         }
@@ -74,9 +74,9 @@ navBuilder();
 
 // Add class 'active' to section when near top of viewport
 document.addEventListener('scroll', function () {
-    for (var i = 0; i < all_sections.length; i++) {
-        var id = i + 1;
-        var li = document.getElementById(id);
+    for (let i = 0; i < all_sections.length; i++) {
+        let id = i + 1;
+        let li = document.getElementById(id);
         if (isInViewport(all_sections[i])) {
             all_sections[i].classList.add("your-active-class");
             SelectNavLink(li);
@@ -89,7 +89,7 @@ document.addEventListener('scroll', function () {
 
 // Scroll to anchor ID using scrollTO event
 function respondToTheClick(evt) {
-    var str = evt.target.textContent;
+    let str = evt.target.textContent;
     const sec_Name = str.replace("Section ", "");
     const target_sec = document.getElementById("section" + sec_Name);
     const dim = target_sec.getBoundingClientRect();
